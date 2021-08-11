@@ -3,6 +3,7 @@ from django.views import generic
 
 from .models import Book, Author, BookInstance, Genre
 
+# Book
 def index(request):
   """View function for home page of site."""
 
@@ -34,3 +35,11 @@ class BookListView(generic.ListView):
 
 class BookDetailView(generic.DetailView):
   model = Book
+
+
+# Author
+class AuthorListView(generic.ListView):
+  model = Author
+
+class AuthorDetailView(generic.DetailView):
+  model = Author
